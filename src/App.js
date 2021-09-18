@@ -1,9 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import * as dayjs  from "dayjs";
-import { nanoid } from "nanoid";
+import CurrentDate from './components/getCurrentDate';
+import CurrentId from "./components/getId";
+import UserInfo from './components/UserInfo';
 
-console.log(dayjs().format());
+
+
 
 function App() {
   return (
@@ -14,8 +16,9 @@ function App() {
         <p>
           Hello world
         </p>
-        <p>how you doin today is {dayjs().format("MMMM/DD/YYYY, HH:mm:ss")}</p>
-        <p>Your unique ID is {nanoid()}</p>
+        <CurrentId />
+        <CurrentDate />
+        <UserInfo />
         <a
           className="App-link"
           href="https://reactjs.org"
